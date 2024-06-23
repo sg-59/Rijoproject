@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* main */
+
+
+main {
+    position: relative;
+}
+
+main .bg-image {
+    background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    filter: blur(1px);
+
+}
+
+main .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+
+}
+
+main button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(172, 115, 8);
+    color: #fff;
+    cursor: pointer;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
+}
+
+/* header */
+header nav ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    padding: 20px 0;
+    gap: 20px;
+    margin-right: 60px;
+}
+
+header nav {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* login */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.login-container h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container form {
+    padding: 20px;
+}
+
+.login-container .form-group {
+    margin-bottom: 20px;
+}
+
+/* .login-container form .form-group input:is(:hover, :focus) {
+    border: none;
+ 
+} */
+.login-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* register */
+.container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+.container .form-container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .form-container form {
+    width: 100%;
+}
+
+.container .form-container .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container .form-container .form-row {
+        flex-direction: column;
+    }
+}
+
+.container .form-group {
+    width: 100%;
+}
+
+.container .form-group input:not(.gender-container input) {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    transition: 0.3s ease-in-out all;
+    margin-top: 5px;
+}
+
+.container form .form-group input:is(:hover, :focus):not(.gender-container input) {
+    box-shadow: 0px 0px 0px 2px rgb(255, 255, 255), 0px 0px 0px 3px rgb(0, 123, 255);
+}
+
+
+.container .form-group label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.container .form-group label:not(.gender-container label) {
+    display: block;
+}
+
+.container form .gender-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container form .gender-container input {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+
+.container form .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container form .button-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(9, 147, 252, 0.986);
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+.dashboard {
+    padding: 10px;
+    padding-top: 80px;
+}
+
+.dashboard .dashboard-wrapper {
+    /* background-color: rgb(148, 145, 145); */
+    border: 3px dashed lime;
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+}
+
+@media (max-width: 768px) {
+    .dashboard .dashboard-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dashboard .dashboard-wrapper .dashboard-sidebar {
+
+    color: #fff;
+    padding: 20px;
+    border-right: 3px dashed lime;
+
+}
+
+.dashboard .dashboard-wrapper .dashboard-sidebar ul {
+    list-style: none;
+}
+
+.dashboard .dashboard-wrapper .dashboard-sidebar ul li {
+    margin-bottom: 10px;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.dashboard .dashboard-wrapper .dashboard-content {
+    padding: 20px;
+}
+
+.alert-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alert-popup .alert-popup__content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.alert-popup .alert-popup__content .alert-popup__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.alert-popup .alert-popup__content .alert-popup__buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.alert-popup .alert-popup__content .alert-popup__buttons button.alert-popup__cancel {
+    background-color: red;
+}
+
+.alert-popup .alert-popup__content .alert-popup__buttons button.alert-popup__confirm {
+    background-color: green;
+}
